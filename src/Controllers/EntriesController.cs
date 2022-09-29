@@ -18,7 +18,18 @@ namespace FitnessFrog.Controllers
 
         public ActionResult Index()
         {
-            List<Entry> entries = _entriesRepository.GetEntries();
+            //List<Entry> entries = _entriesRepository.GetEntries();
+            
+            //Calculate the totla activity
+            //double totalActivity = entries
+              //  .Where(e => e.Exclude == false)
+//                .Sum(e => e.Duration);
+
+
+            //Datermine the number of days that have entires
+            //int umberOfActivityDays = entries
+                //.Select(e=>e.Date)
+                //.Distinct()
             return View();
         }
 
