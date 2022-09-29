@@ -121,12 +121,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EntriesController.cs" />
-    <Compile Include="Data\Activity.cs" />
-    <Compile Include="Data\Entry.cs" />
+    <Compile Include="Data\ActivitiesRepository.cs" />
+    <Compile Include="Data\Data.cs" />
+    <Compile Include="Models\Activity.cs" />
+    <Compile Include="Models\Entry.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\EntriesRepository.cs" />
+    <Compile Include="Data\EntriesRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

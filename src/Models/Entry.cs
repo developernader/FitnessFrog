@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace FitnessFrog.Data
+namespace FitnessFrog.Models
 {
     public class Entry
     {
@@ -23,9 +23,11 @@ namespace FitnessFrog.Data
 
         [Display(Name = "Activity")]
         public int ActivityId { get; set; }
-        public string Notes { get; set; }
+        public Activity Activity { get; set; }
         public double Duration { get; set; }
+        public IntensityLevel Intensity { get; set; }
         public bool Exclude { get; set; }
+        public string Notes { get; set; }
 
         public Entry(int id, int year, int month, int day, Activity activity,
             double duration, IntensityLevel intensityLevel = IntensityLevel, bool exclude = false, string notes = null)

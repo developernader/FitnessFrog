@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace FitnessFrog.Data
+namespace FitnessFrog.Models
 {
     public class Activity
     {
