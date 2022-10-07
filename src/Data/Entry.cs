@@ -27,16 +27,16 @@ namespace FitnessFrog.Data
         public double Duration { get; set; }
         public bool Exclude { get; set; }
 
-        public Entry(int id, int year, int month, int day, Activity activity,
-            double duration, IntensityLevel intensityLevel = IntensityLevel, bool exclude = false, string notes = null)
+        public Entry(int id, int year, int month, int day, Activity activity, 
+            double duration, IntensityLevel intensityLevel, bool exclude = false, string notes = null)
         {
             Id = id;
             Date = new DateTime(year, month, day);
-            ActivityId = (int)activityType;
+            ActivityId = ActivityId;
             Duration = duration;
-            IntensityLevel = intensity;
+            //IntensityLevel = (int)intensityLevel;
             Exclude = exclude;
-            Notes = notes
+            Notes = notes;
         }
     }
 }
