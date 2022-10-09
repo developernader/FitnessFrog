@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using FitnessFrog.Data;
 
-namespace FitnessFrog.Data
+namespace FitnessFrog.Models
 {
     public class Entry
     {
@@ -26,8 +27,9 @@ namespace FitnessFrog.Data
         public string Notes { get; set; }
         public double Duration { get; set; }
         public bool Exclude { get; set; }
+        public int Intensity { get; set; }
 
-        public Entry(int id, int year, int month, int day, Activity activity, 
+        public Entry(int id, int year, int month, int day, Activity activity,
             double duration, IntensityLevel intensityLevel, bool exclude = false, string notes = null)
         {
             Id = id;
