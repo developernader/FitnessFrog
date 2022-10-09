@@ -10,7 +10,7 @@ namespace FitnessFrog.Controllers
 {
     public class EntriesController : Controller
     {
-        private EntriesRepository _entriesRepository = new EntriesRepository();
+        private EntriesRepository _entriesRepository = null;
         public EntriesController()
         {
             _entriesRepository = new EntriesRepository();
@@ -18,18 +18,24 @@ namespace FitnessFrog.Controllers
 
         public ActionResult Index()
         {
-            //List<Entry> entries = _entriesRepository.GetEntries();
-            
+            List<Entry> entries = _entriesRepository.GetEntries();
+
             //Calculate the totla activity
+            double totalActivity = 0;
+
             //double totalActivity = entries
-              //  .Where(e => e.Exclude == false)
-//                .Sum(e => e.Duration);
+            //    .Where(e => e.Exclude == false)
+            //    .Sum(e => e.Duration);
 
 
             //Datermine the number of days that have entires
-            //int umberOfActivityDays = entries
-                //.Select(e=>e.Date)
-                //.Distinct()
+            int numberOfActivityDays = entries
+                .Select(e => e.Date)
+                .Distinct()
+                .Count();
+
+            ViewBag.TotalActivity = totalActivity;
+            ViewBag.AverageDailyActivity = (totalActivity / (double)totalActivity);
             return View();
         }
 
@@ -45,6 +51,7 @@ namespace FitnessFrog.Controllers
             {
                 _entriesRepository.AddEntry(entry);
 
+                return RedirectToAction("Index");
             }
             return View(entry);
         }
