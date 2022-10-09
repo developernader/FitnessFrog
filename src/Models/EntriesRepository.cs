@@ -17,5 +17,19 @@ namespace FitnessFrog.Models
         {
             return null;
         }
+
+        public Entry GetEntry(int id)
+        {
+            return null;
+        }     
+
+        public void UpdateEntry(Entry entry)
+        {
+
+        }
+
+        public void DateEntry(int id)
+        {
+        }
     }
 }
