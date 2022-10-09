@@ -10,7 +10,7 @@ namespace FitnessFrog.Controllers
 {
     public class EntriesController : Controller
     {
-        private EntriesRepository _entriesRepository = null;
+        private EntriesRepository _entriesRepository = new EntriesRepository();
         public EntriesController()
         {
             _entriesRepository = new EntriesRepository();

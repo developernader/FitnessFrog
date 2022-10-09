@@ -9,10 +9,13 @@ namespace FitnessFrog.Data
     public class EntriesRepository
     {
         public List<Entry> GetEntries()
-        { 
+        {
+            return null;
         }
+
         public Entry GetEntry(int id)
-        { 
+        {
+            return null;
         }
 
         public void AddEntry(Entry entry)

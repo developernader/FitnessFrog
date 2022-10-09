@@ -76,7 +76,6 @@ C:\Users\user\source\repos\FitnessFrog\FitnessFrog\obj\Debug\FitnessFrog.csproj.
 C:\Users\user\source\repos\FitnessFrog\FitnessFrog\obj\Debug\FitnessFrog.csproj.CopyComplete
 C:\Users\user\source\repos\FitnessFrog\FitnessFrog\obj\Debug\FitnessFrog.dll
 C:\Users\user\source\repos\FitnessFrog\FitnessFrog\obj\Debug\FitnessFrog.pdb
-C:\Users\user\source\repos\FitnessFrog\src\obj\Debug\FitnessFrog.csproj.AssemblyReference.cache
 C:\Users\user\source\repos\FitnessFrog\src\obj\Debug\FitnessFrog.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\FitnessFrog\src\obj\Debug\FitnessFrog.dll
 C:\Users\user\source\repos\FitnessFrog\src\obj\Debug\FitnessFrog.pdb
