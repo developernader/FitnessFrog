@@ -10,8 +10,8 @@ namespace FitnessFrog.Data
     {
         public List<Activity> GetActivities()
         {
-            return Data.Activities
-                .orderBy(a => a.Name)
+            return Data.activities
+                .OrderBy(a => a.Name)
                 .ToList();
         }
     }

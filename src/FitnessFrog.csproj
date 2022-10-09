@@ -123,6 +123,7 @@
     <Compile Include="Controllers\EntriesController.cs" />
     <Compile Include="Data\ActivitiesRepository.cs" />
     <Compile Include="Data\Data.cs" />
+    <Compile Include="Data\EntriesRepository.cs" />
     <Compile Include="Models\Activity.cs" />
     <Compile Include="Models\Entry.cs" />
     <Compile Include="Global.asax.cs">
