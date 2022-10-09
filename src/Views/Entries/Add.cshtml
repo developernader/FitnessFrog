@@ -1,4 +1,5 @@
 ﻿@model FitnessFrog.Models.Entry
+@using FitnessFrog.Models
 
 @{
     ViewBag.Title = "Add Entry";
@@ -22,7 +23,7 @@
 
             <div class="form-group">
                 @Html.LabelFor(m => m.ActivityId, new { @class = "control-label" })
-                @Html.DropDownListFor(m => m.ActivityId, (SelectList)ViewBag.ActivitiesSelectListItems, new { @class = "form-control" })
+                @*@Html.DropDownListFor(m => m.ActivityId, (SelectList)ViewBag.ActivitiesSelectListItems, new { @class = "form-control" })*@
             </div>
 
             <div class="form-group">
@@ -32,13 +33,29 @@
 
             <div class="form-group">
                 @Html.LabelFor(m => m.Intensity, new { @class = "control - label" })
-                @Html.TextBoxFor(m => m.Intensity, new { @class = "form-control" })
+                @*@Html.TextBoxFor(m => m.Intensity, new { @class = "form-control" })*@
+                @*<input type="radio" name="Intensity" value="Low" />Low
+                    <input type="radio" name="Intensity" value="Low" />Medium
+                    <input type="radio" name="Intensity" value="Low" />Hight*@
+
+                <div>
+                    <label class="radio-inline">
+                        @Html.RadioButtonFor(m => m.Intensity, Entry.IntensityLevel.Low) @Entry.IntensityLevel.Low
+                    </label>
+                    <label class="radio-inline">
+                        @Html.RadioButtonFor(m => m.Intensity, Entry.IntensityLevel.Medium) @Entry.IntensityLevel.Medium
+                    </label>
+                    <label class="radio-inline">
+                        @Html.RadioButtonFor(m => m.Intensity, Entry.IntensityLevel.High) @Entry.IntensityLevel.High
+                    </label>
+                </div>
             </div>
 
             <div class="form-group">
                 @Html.LabelFor(m => m.Exclude, new { @class = "label-control" })
                 @Html.TextBoxFor(m => m.Exclude, new { @class = "form-control" })
             </div>
+
         </div>
 
         <div class="col-md-6">
