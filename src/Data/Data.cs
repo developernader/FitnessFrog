@@ -8,7 +8,7 @@ namespace FitnessFrog.Data
 {
     public class Data
     {
-        public static List<FitnessFrog.Models.Activity> activities { get; set; }
+        public static List<FitnessFrog.Models.Activity> Activities { get; set; }
 
     }
 }

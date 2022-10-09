@@ -29,18 +29,25 @@ namespace FitnessFrog.Controllers
 
 
             //Datermine the number of days that have entires
-            int numberOfActivityDays = entries
-                .Select(e => e.Date)
-                .Distinct()
-                .Count();
+            //int numberOfActivityDays = entries
+            //    .Select(e => e.Date)
+            //    .Distinct()
+            //    .Count();
 
-            ViewBag.TotalActivity = totalActivity;
-            ViewBag.AverageDailyActivity = (totalActivity / (double)totalActivity);
+
             return View();
         }
 
         public ActionResult Add()
         {
+            var entry = new Entry()
+            {
+                Date = DateTime.Today
+
+            };
+
+            //ViewBag.ActivitiesSelectListItems = new SelectList(
+            //    Data.Data.Activities, "Id", "Name");
             return View();
         }
 
@@ -53,6 +60,10 @@ namespace FitnessFrog.Controllers
 
                 return RedirectToAction("Index");
             }
+
+            ViewBag.ActivitiesSelectListItems = new SelectList(
+      Data.Data.Activities, "Id", "Name");
+
             return View(entry);
         }
 
