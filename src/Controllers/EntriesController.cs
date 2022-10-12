@@ -46,8 +46,8 @@ namespace FitnessFrog.Controllers
 
             };
 
-            //ViewBag.ActivitiesSelectListItems = new SelectList(
-            //    Data.Data.Activities, "Id", "Name");
+            ViewBag.ActivitiesSelectListItems = new SelectList(
+                Data.Data.Activities, "Id", "Name");
             return View();
         }
 
