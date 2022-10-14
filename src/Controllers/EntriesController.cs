@@ -58,6 +58,7 @@ namespace FitnessFrog.Controllers
             if (ModelState.IsValid)
             {
                 _entriesRepository.AddEntry(entry);
+                TempData["Message"] = "Your entry wass successfully added";
                 return RedirectToAction("Index");
             }
 
@@ -92,6 +93,7 @@ namespace FitnessFrog.Controllers
             if (ModelState.IsValid)
             {
                 _entriesRepository.UpdateEntry(entry);
+                TempData["Message"] = "Your entry wass successfully Updated";
                 return RedirectToAction("Index");
             }
             
@@ -119,7 +121,7 @@ namespace FitnessFrog.Controllers
         public ActionResult Delete(int id)
         {
             _entriesRepository.DeleteEntry(id);
-
+            TempData["Message"] = "Your entry wass successfully Deleted";
             return RedirectToAction("Index");
         }
 
