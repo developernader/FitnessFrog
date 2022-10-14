@@ -104,8 +104,23 @@ namespace FitnessFrog.Controllers
         {
             if (id is null)
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
+            
+            Entry entry = _entriesRepository.GetEntry((int)id);
 
-            return View();
+            if (entry == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(entry);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            _entriesRepository.DeleteEntry(id);
+
+            return RedirectToAction("Index");
         }
 
         public void ValidateEntry(Entry entry)
