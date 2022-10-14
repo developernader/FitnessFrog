@@ -1,7 +1,8 @@
-﻿
+﻿@model FitnessFrog.Models.Entry
+
 @{
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
-
+<h2>@ViewBag.Title</h2>
+@Html.Partial("_EntryForm")

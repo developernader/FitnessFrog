@@ -154,4 +154,3 @@ C:\Users\user\source\repos\FitnessFrog\src\bin\Newtonsoft.Json.xml
 C:\Users\user\source\repos\FitnessFrog\src\bin\Antlr3.Runtime.pdb
 C:\Users\user\source\repos\FitnessFrog\src\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\user\source\repos\FitnessFrog\src\obj\Debug\FitnessFrog.csproj.CopyComplete
-C:\Users\user\source\repos\FitnessFrog\src\obj\Debug\FitnessFrog.csproj.AssemblyReference.cache
